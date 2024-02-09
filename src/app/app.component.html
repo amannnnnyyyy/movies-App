@@ -1,27 +1,14 @@
-<h1>{{title|lowercase}}</h1>
-<h3>Date: {{today|date:'dd/mm/yyyy'}}</h3>
-<hr>
-<img [src]="imageUrl" alt="movies image">
-<br>
-<span>
-  Selling price: <strong>{{sellingPrice|currency}}</strong>
-  profit:<strong>{{sellingPrice|profit:10|currency}}</strong>, 
-  
-</span>
+<!-- Navbar  -->
+<app-navbar></app-navbar>
 
-<hr>
-<p [style.backgroundColor]="bgColor">
-  This is a class and style binding
-</p>
-<label for="">{{timeNow|date:'ss:mm:hh~~dd/mm/yyyy'}}</label>
-<br>
-<button (click)="setTimeToNow()" type="button">Set time to now</button>
 
-<input #color type="text" placeholder="type your color">
-<button (click)="setTextColor(color.value)">set Color</button>
-<p [style.color]="colorV">Sample Text</p>
 
-<hr>
-<br>
-<input type="text" [(ngModel)]="fullName">
-<p>{{fullName}}</p>
+<!-- Content -->
+<div class="container">
+<app-home></app-home>
+</div>
+
+
+
+<!-- Footer-->
+<app-footer></app-footer>
